@@ -10,7 +10,7 @@
    hosts: "{{ target_host }}"
    tasks:
    - shell: cd {{ location }} && mkdir {{ folder }}
-   - shell: ls {{ location }}
+   - shell: ls {{ location }} | grep {{ folder }}
      register: listing
    - debug:
        msg: "{{ listing }}"
