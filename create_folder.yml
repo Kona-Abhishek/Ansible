@@ -5,4 +5,10 @@
     - name: Adding host
       add_host:
         host: "{{ target_host }}"
+
+ - name: Creating a folder
+   hosts: "{{ target_host }}"
+   tasks:
+   - debug:
+       msg: "Hi Abhishek!"
   
