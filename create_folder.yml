@@ -9,8 +9,11 @@
  - name: Creating a folder
    hosts: "{{ target_host }}"
    tasks:
+   - shell: cd {{ location }} && mkdir {{ folder }}
    - shell: ls {{ location }}
      register: listing
    - debug:
        msg: "{{ listing }}"
+   
+   
   
