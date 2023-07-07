@@ -1,0 +1,8 @@
+---
+ - name: Creating a folder
+   hosts: localhost
+   tasks:
+    - name: Adding host
+      add_host:
+        host: "{{ target_host }}"
+  
